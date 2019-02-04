@@ -2,4 +2,4 @@ spring:
   application:
     name: test
 
-msg: config-hello-world
+msg: config-hello-world-v2
