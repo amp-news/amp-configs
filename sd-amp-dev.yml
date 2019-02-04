@@ -1,9 +1,9 @@
-server:
-  port: 8001
-
 spring:
   application:
     name: sp-amp
+
+server:
+  port: 8001
 
 eureka:
   instance:
