@@ -1,0 +1,24 @@
+AMP Info
+--------
+Used ports: 8000 - 9000
+--------
+CONFIG SERVER
+envs:
+	config.server.git.username
+	config.server.git.pass
+	
+port 8000
+remote configs on git
+https://cloud.spring.io/spring-cloud-config/multi/multi__spring_cloud_config_server.html
+docker build -f Dockerfile -t config-server .
+Docker run -a STDOUT -i -p 8000:8000 
+	-e config.server.git.username=snitavets.ilya@gmail.com 
+	-e config.server.git.pass=GitMzrs56@Hub18?7 
+	--name config-server 
+	config-server
+
+test GET http://localhost:8000/test/dev/master
+--------
+EUREKA SERVER
+envs:
+	config.server.uri
